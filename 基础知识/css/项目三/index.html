@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小米产品模块</title>
+</head>
+<style>
+    /* 第一步  消除内外边距*/
+    
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    a {
+        color: #333;
+        text-decoration: none;
+    }
+    
+    body {
+        background-color: #bfbfbf;
+    }
+    
+    .box {
+        width: 298px;
+        height: 415px;
+        background-color: white;
+        /* 让块级的盒子水平居中 */
+        margin: 100px auto;
+    }
+    
+    .box img {
+        /* 让图片大小和父亲一样宽 */
+        width: 100%;
+    }
+    
+    .review {
+        height: 70px;
+        font: size 14px;
+        /* 因为这个段落没有width属性，所以padding不会撑开盒子的宽度 */
+        padding: 0 28px;
+        margin-top: 30px;
+    }
+    
+    .appraise {
+        color: #d4d7d7;
+        font-size: 12px;
+        margin-top: 20px;
+        padding: 0 28px;
+    }
+    
+    .info {
+        font-size: 14px;
+        margin-top: 15px;
+        padding: 0 28px;
+    }
+    
+    .info h5 {
+        /* h为块内元素，独占一行，因此要与span变成同一行，必须将其转化为行内块元素 */
+        display: inline-block;
+        font-weight: 400;
+        ;
+    }
+    
+    .info span {
+        color: orange;
+    }
+    
+    .info em {
+        font-style: normal;
+        color: #ebe4e0;
+        margin: 0 6px 0 10px;
+    }
+</style>
+
+<body>
+    <div class="box">
+        <img src="img.jpg" alt="">
+        <p class="review">快递牛，整体不错蓝牙可以说妙恋。格力</p>
+        <div class="appraise">来自于 1189326 的评价</div>
+        <div class="info">
+            <h5><a href="../bigbg.jpg">Redmi AirDots真无线蓝... </a></h5>
+            <!-- 小竖线设计 -->
+            <em>|</em>
+            <em></em>
+            <span>99.9元</span>
+        </div>
+    </div>
+</body>
+
+</html>

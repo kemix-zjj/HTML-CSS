@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动练习一</title>
+</head>
+<style>
+    /* ul li中有内外边距。div没有内外边距 */
+    
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    li {
+        list-style: none;
+    }
+    
+    .box {
+        width: 799px;
+        height: 250px;
+        margin: 0 auto;
+        background-color: pink;
+    }
+    
+    .box ul li {
+        height: 250px;
+        width: 192px;
+        background-color: green;
+        float: left;
+        margin-right: 10px;
+    }
+    /* 最后一个ul没有右外边距 */
+    
+    .box ul .last {
+        margin-right: 0;
+    }
+</style>
+
+<body>
+    <div class="box">
+        <ul>
+            <li>111</li>
+            <li>111</li>
+            <li>111</li>
+            <li class="last"> 1</li>
+
+        </ul>
+    </div>
+</body>
+
+</html>

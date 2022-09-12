@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D上下翻转</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul {
+            margin: 100px;
+        }
+        
+        ul li {
+            float: left;
+            margin: 0 15px;
+            width: 200px;
+            height: 60px;
+            list-style: none;
+            /* 一会我们需要给box 旋转 也需要透视 干脆给li加 里面的子盒子都有透视效果 */
+            perspective: 500px;
+        }
+        
+        .box {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: all .4s;
+        }
+        
+        .box:hover {
+            /* !!!!!!!!!!!!!!注意空间想象 */
+            transform: rotateX(90deg);
+        }
+        
+        .front,
+        .bottom {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 60px;
+            font-size: 20px;
+            color: white;
+        }
+        
+        .front {
+            background-color: pink;
+            z-index: 1;
+            /* 粉色盒子向前走高度的一半，使旋转点保证在盒子的中心位置!!!!!!!!!!!!!!注意空间想象 */
+            transform: translateZ(30px);
+        }
+        
+        .bottom {
+            background-color: skyblue;
+            /* 这个x轴一定是负值 */
+            /* 我们如果有移动 或者其他样式，必须先写我们的移动 !!!!!!!!!!!!!!注意空间想象*/
+            transform: translateY(30px) rotateX(-90deg);
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <div class="box">
+                <div class="front">好运连连</div>
+                <div class="bottom">桃花开开</div>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <div class="front">好运连连</div>
+                <div class="bottom">桃花开开</div>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <div class="front">好运连连</div>
+                <div class="bottom">桃花开开</div>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <div class="front">好运连连</div>
+                <div class="bottom">桃花开开</div>
+            </div>
+        </li>
+    </ul>
+</body>
+
+</html>

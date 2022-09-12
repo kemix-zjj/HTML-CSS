@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>运动小熊</title>
+</head>
+<style>
+    body {
+        background-color: #ccc;
+    }
+    
+    div {
+        /* 子绝父相？？？ */
+        position: absolute;
+        width: 200px;
+        height: 100px;
+        background: url(bear.png) no-repeat;
+        /* 我们元素可以添加多个动画 */
+        animation: bear 1s steps(8) infinite, move 3s forwards;
+    }
+    
+    @keyframes bear {
+        0% {
+            background-position: 0 0;
+        }
+        /* 针对背景图片来说，是从右往左走的 */
+        100% {
+            background-position: -1600px 0;
+        }
+    }
+    
+    @keyframes move {
+        0% {
+            left: 0;
+        }
+        100% {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+</style>
+
+<body>
+    <div></div>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+.head {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.start {
+    text-align: center;
+    font-size: 5px;
+    font-weight: 500;
+    color: #8888;
+}
+
+.txt1 {
+    text-indent: 2em;
+    font-size: 14px;
+}
+
+.txt2 {
+    font-weight: 600;
+}
+
+
+/* 想要图片居中，则让它的父亲div去居中 */
+
+.image {
+    text-align: center;
+}
+
+.txt3 {
+    font-size: 14px;
+    text-indent: 2em;
+}
+
+.txt4 {
+    font-weight: 10px;
+    font-size: 3px;
+    color: #8888;
+}

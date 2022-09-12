@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>秒杀价</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .box {
+        width: 200px;
+        height: 30px;
+        border: 1px solid red;
+        margin: 20px auto;
+        line-height: 30px;
+        text-align: center;
+    }
+    
+    .box .miaosha {
+        position: relative;
+        float: left;
+        width: 120px;
+        height: 100%;
+        background-color: red;
+        font-weight: 700;
+        color: #fff;
+    }
+    /* 直角三角形的设计 */
+    
+    .box .miaosha i {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 0;
+        height: 0;
+        border-color: transparent #fff transparent transparent;
+        border-style: solid;
+        border-width: 30px 10px 0 0;
+    }
+    
+    .orgin {
+        font-weight: 700;
+        color: grey;
+        text-decoration: line-through;
+    }
+</style>
+
+<body>
+    <div class="box">
+        <span class="miaosha">$1799
+          <i></i>
+        </span>
+        <span class="orgin">$3000</span>
+    </div>
+</body>
+
+</html>

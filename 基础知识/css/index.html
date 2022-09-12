@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星际穿越-css</title>
+    <style>
+        /* 标签选择器 */
+        
+        p {
+            color: green;
+            font-size: 20px;
+        }
+        
+        div {
+            color: pink;
+            font-size: 20px;
+        }
+        /* 类选择器 -->样式点定义  结构类（class）调用  一个或多个  开发最常用*/
+        
+        .blue {
+            color: blue;
+        }
+        
+        .font-80 {
+            font-size: 80px;
+        }
+        /* id选择器（唯一的）  样式#定义，结构id调用 只能调用一次*/
+        
+        #yellow {
+            color: yellow;
+        }
+        /* 通配符选择器（*）  选取页面所有元素*/
+        /* 字体属性  文字变倾斜 加粗 字号设为16像素 并且是微软雅黑 */
+        
+        #font {
+            font-style: italic;
+            font-weight: 700;
+            font-size: 16px;
+            font-family: "Microsoft Yahei";
+        }
+        /* 文本属性 */
+        
+        .p {
+            color: brown;
+            /* text-align: center; */
+            text-decoration: underline;
+            text-indent: 2em;
+            line-height: 88px;
+        }
+        /* css引入方式 行内式  嵌入式  链接式 */
+
+        
+    </style>
+    
+</head>
+
+<body>
+    <p>男</p>
+    <p>男</p>
+    <div>女</div>
+    <div>女</div>
+
+    <ul>
+        <li class="blue">星</li>
+        <li>际</li>
+        <li>穿</li>
+        <li>越</li>
+    </ul>
+    <div class="blue font-80">星际穿越</div>
+
+    <div id="yellow">星星</div>
+
+    <div id="font">三生三世十里桃花，一心一意百行代码</div>
+
+    <p class="p">在豆瓣和IMDB，同时跻身影史最高评分前35名。获得了不错的票房和超高的口碑。
+        <br> 这部电影给观众带来了非凡的震撼，也让很多人提出了很多疑问:
+        <br> 比如，在那颗满是水的星球，为什么一个小时相当于地球上的七年？
+        <br> 黑洞不是会吞噬一切吗？为什么飞船还可以绕黑洞转不被吸进去？
+        <br> 为什么男主角掉进黑洞，没有被撕成碎片？
+        <br> 为什么男主角能在那个超立方体中给女儿发信息？
+        <br> 最后，地球上的人类又是怎么逃到土星旁边的？
+    </p>
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星际穿越</title>
+</head>
+
+<body>
+    <!-- 标题 段落 换行 -->
+    <!-- 加粗 倾斜  删除线 下划线 特殊字符 -->
+    <h2>星际穿越</h2>
+    <p><strong>《星际穿越》</strong>这部电影由<em>诺兰</em>导演的科幻神作，豆瓣评分高达9.1分。<del>在豆瓣和IMDB，同时跻身影史最高评分前35名。</del>获得了不错的票房和超高的口碑。 这部电影给观众带来了非凡的震撼，也让很多人提出了很多疑问:
+    </p>
+    <p id="锚点链接">比如，在那颗满是水的星球，为什么一个小时相当于地球上的七年？
+        <br/>黑洞不是会吞噬一切吗？为什么飞船还可以绕黑洞转不被吸进去？
+        <br/>为什么男主角掉进黑洞，没有被撕成碎片？为什么男主角能在那个超立方体中给女儿发信息？
+        <br/>最后，地球上的人类又是怎么逃到土星旁边的？</p>
+    <p>“当置身于浩瀚宇宙时，背后支撑我的是整个国家乃至整个人类，太空探索是人类共同的事业。我没有理由不热爱自己的国家和生存的家园。“
+        <br/> &nbsp &nbsp &nbsp &nbsp &nbsp<del> &lt &gt</del> &nbsp &nbsp &nbsp &nbsp &nbsp--<ins>杨利伟</ins></p>
+
+    <!-- 图像 -->
+    <img src="04.jpg" width="300" border="3px" title="地球"><br>
+
+    <!-- 链接 -->
+    <a href="https://www.bilibili.com/bangumi/play/ss28585/"> (外部链接)Bilibili观看</a><br>
+    <a href="index01">(内部链接一)</a><br>
+    <a href="#">空链接</a><br>
+    <a href="index02"><img src="01.jpg" width="100"></a><br>
+    <a href="#锚点链接">星际穿越？</a>
+
+    <!-- 表格 -->
+    <table align="center" border="1" cellpadding="20px" cellspacing="0" width="800px">
+        <thead>
+            <tr>
+                <th>书籍名</th>
+                <th>作者</th>
+                <th>出版社</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>三体</td>
+                <td>刘慈欣</td>
+                <td>新华出版社</td>
+            </tr>
+            <tr>
+                <td>活着</td>
+                <td>余华</td>
+                <td>新华出版社</td>
+            </tr>
+            <tr>
+                <td>格林童话</td>
+                <td>安徒生</td>
+                <td>新华出版社</td>
+            </tr>
+        </tbody>
+    </table><br>
+
+    <!-- 合并单元格 -->
+    <table align="center" border="2" cellspacing="0" width="400" height="200">
+        <tr>
+            <td colspan="2"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td rowspan="2"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <!-- 列表 -->
+    <ul>
+        <li>星</li>
+        <li>际</li>
+        <li>穿</li>
+        <li>越</li>
+    </ul>
+    <ol>
+        <li>星</li>
+        <li>际</li>
+        <li>穿</li>
+        <li>越</li>
+    </ol>
+    <dl>
+        <dt>星际穿越</dt>
+        <dd>星</dd>
+        <dd>际</dd>
+        <dd>穿</dd>
+        <dd>越</dd>
+    </dl>
+
+    <!-- 表单 -->
+
+    <!-- 1.input输入表单元素 -->
+    <form action="xx.php" method="GET">
+        用户名：<input type="text" name="username" value="请输入用户名" maxlength="6" />
+        <br> 密码:<input type="password" name="password" />
+        <!--单选按钮radio中，必须有相同的name值，才能实现多选一 -->
+        <br>性别：男<input type="radio" name="sex" value="男"> 女<input type="radio" name="sex" value="女">
+        <br> 爱好：吃饭<input type="checkbox" name="hobby" value="吃饭"> 睡觉<input type="checkbox" name="hobby" value="睡觉"> 打豆豆<input type="checkbox" name="hobby" checked="checked" value="打豆豆">
+        <br>
+        <input type="submit" value="免费注册" />
+        <input type="reset" value="重新填写" />
+        <br>
+        <input type="button" value="获取验证码" />
+        <br> 上传头像：
+        <input type="file" />
+    </form>
+
+    <!-- <label>标签  扩大点击范围(点击男即可让单选按钮变黑) -->
+    <label for="nan">男 </label> <input type="radio" id="nan" />
+    <br>3种文本框对比
+
+
+    <!-- 2.select下拉表单元素 -->
+    籍贯:
+    <select>
+        <option>山东</option>
+        <option>北京</option>
+        <option>四川</option>
+        <option selected="select">火星</option>
+    </select>
+    <br>
+
+
+    <!-- 3.textarea文本域元素 -->
+    今日反馈：
+    <textarea> hahahahahhahahahah</textarea>
+
+
+</body>
+
+</html>

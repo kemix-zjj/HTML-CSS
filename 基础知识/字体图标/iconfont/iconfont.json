@@ -1,0 +1,44 @@
+{
+  "id": "2754118",
+  "name": "haha ",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "23588014",
+      "name": "在线考研",
+      "font_class": "zaixiankaoyan",
+      "unicode": "e682",
+      "unicode_decimal": 59010
+    },
+    {
+      "icon_id": "23588015",
+      "name": "书包",
+      "font_class": "shubao",
+      "unicode": "e683",
+      "unicode_decimal": 59011
+    },
+    {
+      "icon_id": "23588017",
+      "name": "书籍",
+      "font_class": "shuji",
+      "unicode": "e684",
+      "unicode_decimal": 59012
+    },
+    {
+      "icon_id": "23588071",
+      "name": "显微镜",
+      "font_class": "xianweijing",
+      "unicode": "e685",
+      "unicode_decimal": 59013
+    },
+    {
+      "icon_id": "23588072",
+      "name": "钢笔",
+      "font_class": "gangbi",
+      "unicode": "e686",
+      "unicode_decimal": 59014
+    }
+  ]
+}

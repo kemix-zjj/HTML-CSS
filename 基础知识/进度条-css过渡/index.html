@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>进度条</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .bar {
+        width: 400px;
+        height: 30px;
+        border: 1px solid red;
+        border-radius: 15px;
+        margin: 100px auto;
+        padding: 1px;
+    }
+    
+    .bar-in {
+        width: 200px;
+        height: 100%;
+        border-radius: 15px;
+        background-color: red;
+        /* 谁要过渡给谁加 */
+        transition: width 1s;
+    }
+    
+    .bar:hover .bar-in {
+        width: 100%;
+    }
+</style>
+
+<body>
+    <div class="bar">
+        <div class="bar-in"></div>
+    </div>
+</body>
+
+</html>

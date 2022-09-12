@@ -1,0 +1,331 @@
+body {
+  max-width: 540px;
+  min-width: 320px;
+  margin: 0 auto;
+  font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei",
+    STXihei, hei;
+  color: #000;
+  background: #f2f2f2;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+ul,
+li {
+  list-style: none;
+  /* ul中有默认的margin值和padding值，在初始化时应该设为0 */
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+/* 将所有的div盒子变成CSS3模型 */
+div {
+  box-sizing: border-box;
+}
+
+/* 搜索模块 */
+.search-index {
+  display: flex;
+  /* 固定定位与父级没有关系，它以屏幕为准 */
+  position: fixed;
+  top: 0;
+  left: 50%;
+  /* 兼顾老版本写法 */
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  /* 固定盒子必须要写宽度。 */
+  width: 100px;
+  min-width: 320px;
+  max-width: 540px;
+  height: 44px;
+
+  /* 想要固定fixed的盒子居中对齐，使用margin:0 auto无效
+  此时必须，通过left:50%-->此时是左上角位于屏幕的50% 
+  然后再通过transform：translateX(-50%) --> 此时是向左移动自身宽度的一半
+  */
+
+  background-color: #f6f6f6;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.search {
+  position: relative;
+  flex: 1;
+  height: 26px;
+  border: 1px solid #ccc;
+  margin: 7px 10px;
+  border-radius: 5px;
+  /* 盒子阴影 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  /* 搜索框中文字设置 */
+  /* 在CSS3中，盒子的高度是包括border+padding+margin的
+  因此，若文字行高等于盒子的高度，其会偏下一点点。 */
+  line-height: 24px;
+  font-size: 12px;
+  color: #666;
+  padding-left: 25px;
+}
+
+.search::before {
+  content: "";
+  /* 此时是块级元素，会将显示的文字挤掉下来。
+  处理，将before改为绝对定位，绝对定位不占位置  且定位后，margin就不起作用了。
+  display: block; */
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 15px;
+  height: 15px;
+  background: url(../images/sprite.png) no-repeat -59px -279px;
+  background-size: 104px auto;
+  /* margin: 5px; */
+}
+
+.user {
+  /* 它的父盒子加上了flex布局后，就可以设定宽高了。不必再考虑到其是链接即行内元素无法设定宽高的问题了 */
+  width: 44px;
+  height: 44px;
+  font-size: 12px;
+  text-align: center;
+  color: #2eaae0;
+}
+
+.user::before {
+  content: "";
+  display: block;
+  /* 精灵图二倍图缩放
+  1.将精灵图在外部软件中宽度缩放至一半
+  2. 然后再测量所需图标的大小和位置，在css样式中书写大小与位置
+  3.将精灵图进行缩放 background-size:缩放后的宽度，auto;
+  */
+  width: 23px;
+  height: 23px;
+  background: url(../images/sprite.png) no-repeat -59px -194px;
+  background-size: 104px auto;
+  margin: 4px auto -2px;
+}
+
+/* 焦点focus模块 */
+/* 因为前面的搜索模块是固定定位，其不占用位置。因此图片会飘上去的，所有此时必须加padding-top */
+.focus {
+  padding-top: 44px;
+}
+.focus img {
+  width: 100%;
+}
+
+/* 局部导航栏 */
+.local-nav {
+  display: flex;
+  height: 64px;
+  background-color: #fff;
+  margin: 3px 4px;
+  border-radius: 8px;
+}
+
+.local-nav li {
+  flex: 1;
+}
+
+.local-nav a {
+  display: flex;
+  flex-direction: column;
+  /* 侧轴居中对齐  因为是单行的*/
+  align-items: center;
+  font-size: 12px;
+}
+
+.local-nav li [class^="local-nav-icon"] {
+  width: 32px;
+  height: 32px;
+  background-color: pink;
+  margin-top: 8px;
+  background: url(../images/localnav_bg.png) no-repeat 0 0;
+  background-size: 32px auto;
+}
+.local-nav li .local-nav-icon-icon2 {
+  background-position: 0 -32px;
+}
+
+.local-nav li .local-nav-icon-icon3 {
+  background-position: 0 -64px;
+}
+
+.local-nav li .local-nav-icon-icon4 {
+  background-position: 0 -96px;
+}
+
+.local-nav li .local-nav-icon-icon5 {
+  background-position: 0 -128px;
+}
+
+/* 主导航栏 */
+nav {
+  /* 因为是给nav小圆角，但是div没有给，div上的颜色会覆盖小圆角 */
+  overflow: hidden;
+  border-radius: 8px;
+  /* 上0 左右3 下3 */
+  margin: 0 4px 3px;
+}
+
+.nav-common {
+  display: flex;
+  height: 88px;
+  background-color: pink;
+}
+
+.nav-common:nth-child(2) {
+  margin: 3px 0;
+}
+
+.nav-items {
+  /* 不冲突，上有老，下有小 */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-items a {
+  flex: 1;
+  text-align: center;
+  line-height: 44px;
+  color: #fff;
+  font-size: 14px;
+  /* 文字阴影：水平 垂直 颜色*/
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.nav-items a:nth-child(1) {
+  border-bottom: 1px solid #fff;
+}
+
+/* 第一个nav-items中不需要下边框 */
+.nav-items:nth-child(1) {
+  border: 0;
+  /* 背景图片靠底部中心对齐 */
+  background: url(../images/hotel.png) no-repeat bottom center;
+  /* 三倍图，则缩小1/3 */
+  background-size: 121px auto;
+}
+
+/* n+2代表从第2个开始，-n+2代表选中前2个 */
+.nav-items:nth-child(-n + 2) {
+  border-right: 1px solid #fff;
+}
+
+/* 渐变色处理 */
+.nav-common:nth-child(1) {
+  background: -webkit-linear-gradient(left, #fa5a55, #fa994d);
+}
+
+.nav-common:nth-child(2) {
+  background: -webkit-linear-gradient(left, #4b90ed, #53bced);
+}
+
+.nav-common:nth-child(3) {
+  background: -webkit-linear-gradient(left, #34c2a9, #6cd559);
+}
+
+/* 侧导航栏 */
+.subnav-entry {
+  display: flex;
+  border-radius: 8px;
+  background-color: #fff;
+  margin: 0 4px;
+  flex-wrap: wrap;
+  padding: 5px 0;
+}
+
+.subnav-entry li {
+  /* 里面的盒子可以写百分比，是相对于父级的百分比 */
+  flex: 20%;
+}
+
+.subnav-entry a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subnav-entry-icon {
+  width: 28px;
+  height: 28px;
+  background-color: pink;
+  margin-top: 4px;
+  background: url(../images/subnav-bg.png) no-repeat;
+  background-size: 28px;
+}
+
+/* 销售模块 */
+.sales-box {
+  border-top: 1px solid #bbb;
+  background-color: #fff;
+  margin: 4px;
+}
+
+.sales-hd {
+  position: relative;
+  height: 44px;
+  border-bottom: 1px solid #ccc;
+}
+
+.sales-hd h2 {
+  position: relative;
+  /* 不让其中的文字显示出来 */
+  text-indent: -999px;
+  overflow: hidden;
+}
+
+.sales-hd h2::after {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  content: "";
+  width: 79px;
+  height: 15px;
+  background: url(../images/hot.png) no-repeat 0 -20px;
+  background-size: 79px auto;
+  color: #fff;
+}
+
+.more {
+  position: absolute;
+  right: 5px;
+  top: 0;
+  background: -webkit-linear-gradient(left, #ff506c, #ff6bc6);
+  border-radius: 15px;
+  padding: 3px 20px 3px 10px;
+}
+
+.more::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  width: 7px;
+  height: 7px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(45deg);
+}
+
+.row {
+  display: flex;
+}
+
+.row a {
+  flex: 1;
+  border-bottom: 1px solid #eee;
+}
+.row a:nth-child(1) {
+  border-right: 1px solid #eee;
+}
+.row a img {
+  width: 100%;
+}
